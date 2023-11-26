@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ *{
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+body{
+    display:grid;
+    place-items: center;
+    height:100vh;
+}
+.container{
+    height: 70vh;
+    width:70vw;
+    display : grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50% 50%;
+    border:2px solid grey;
+    grid-template-areas: 
+    'a h1 h2'
+    'a f f ';
+}
+.aside{
+    background-color: black;
+    color:white;
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#h1{
+   grid-area: h1;
+}
+#h2{
+    background-color: rgb(179, 178, 178);
+   grid-area: h2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 2px;
+   text-align: center;
+}
+.footer{
+    grid-area: f;
+}
+button{
+    border:2px solid white;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+      <div class="aside">
+        <h2>Cats</h2><br>
+        <p>Cats are small carnivorous mammals that belong to the family Felidae . They are known for their agility, grace, and hunting skills. The domestication of cats is believed to have occurred in the Near East around 7500 BC</p><br>
+        <p>Image from <u>Freepik</u></p><br><br>
+        <button>Learn More</button>
+      </div>
+      <div id="h1">
+        <img src="./images/cat1.jpeg" alt="" width="100%" height="100%">
+      </div>
+      <div id="h2">
+        <h2>Basic rules</h2>
+    <p>The term “basic rules” refers to the fundamental principles or instructions that dictate the way things are or should be done.</p>
+      </div>
+      <div class="footer">
+        <img src="./images/cat2.jpeg" alt="" width="100%" height="100%">
+      </div>
+        
+    </div>
+</body>
+</html>
